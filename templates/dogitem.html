@@ -1,0 +1,62 @@
+<html>
+<head>
+<style>
+  .container {
+    display: flex;
+    border-bottom: 1px solid deepskyblue;
+  }
+  .info {
+    flex: 1;
+  }
+  .info div {
+    margin-bottom: 5px;
+  }
+  .button-container {
+    display: flex;
+    align-items: flex-end;
+    justify-content: flex-end;
+    flex: 1;
+  }
+  .button {
+    margin-bottom: 60px;
+    border: solid 3px;
+    border-radius: 6px;
+    color: white;
+    padding: 10px 16px;
+    font-size: 16px;
+    transition-duration: 0.4s;
+    cursor: pointer;
+    background-color: white;
+    color: black;
+    border: 2px solid deepskyblue;
+  }
+  .button:hover {
+    background-color: black;
+    color: white;
+  }
+  .image {
+    flex: 1;
+    margin-right: 20px;
+  }
+  .image img {
+    width: 100%;
+    height: auto;
+    border-radius: 6px;
+  }
+</style>
+</head>
+<div class="container">
+  <div class="image">
+    <img src="{{ url_for('static', filename=dog['image']) }}" alt="{{ dog['name'] }} Image">
+  </div>
+  <div class="info">
+    <h3 style="margin-bottom: 3px">{{dog['name']}}</h3>
+    <div><b>Location:</b> {{dog['location']}}</div>
+    <div><b>Age:</b> {{dog['age']}}</div>
+    <div><b>Sex:</b> {{dog['sex']}}</div>
+  </div>
+  <div class="button-container">
+    <button class="button button1">Apply to Adopt</button>
+  </div>
+</div>
+</html>

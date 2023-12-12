@@ -44,7 +44,14 @@
       <h2>About Us</h2>
       <p class="bodytext">At Power Pups, our mission is rooted in compassion, dedication, and a commitment to finding loving homes for every pup in need. We strive to provide a safe haven for these furry companions, offering them a nurturing environment where they can thrive while awaiting their forever families. Our center operates on the belief that every dog deserves a chance at a joyful life, and we work tirelessly to match each puppy with the perfect home, ensuring compatibility and lifelong happiness. Through responsible adoption practices, education on pet care, and unwavering support for both our adopters and our furry friends, we aim to create a world where every wagging tail signifies a story of love, care, and a forever home.</p>
       <h2>Available Pups</h2>
-      <p class="bodytext">TO DO - Show Available Puppies</p>
+      <div>
+        <p class="bodytext">
+          {% for dog in dogs%}
+            {% include 'dogitem.html' %}
+          {% endfor %}
+        </p>
+      </div>
+
       <div style = text-align:center;>
         <button>Contact Us</button>
         <p>Copyright 2023, Power Pups</p>
